@@ -32,12 +32,39 @@ public:
         return out;
     }
 
-    void insert(T item) {
+    void insert(const T &data) {
         Node *tempNode{new Node{}};
-        tempNode->data = item;
+        tempNode->data = data;
         if (m_head != nullptr) tempNode->next = m_head;
         m_head = tempNode;
     }
+
+    void insert(const T &data, int index) {
+        Node *temp{new Node()};
+        temp->data = data;
+        temp->next = nullptr;
+
+        if (index == 0) {
+            if (m_head != nullptr) {
+                temp->next = m_head;
+                m_head = temp;
+            } else {
+                m_head = temp;
+            }
+            return;
+        }
+
+        Node *currentNode{m_head};
+        for (int i{0}; i < index - 1; ++i) {
+            currentNode = currentNode->next;
+            if (currentNode->next == nullptr) throw std::invalid_argument("Index out of bounds");
+        }
+        temp->next = currentNode->next;
+        currentNode->next = temp;
+
+
+    }
+
 
     void print() {
         Node *temp{m_head};

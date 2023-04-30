@@ -26,19 +26,29 @@ int main() {
     // Testing list.h
 //  testList();
 
-    std::cout << "How many links? >> ";
-    int numLinks{};
-    std::cin >> numLinks;
+//    std::cout << "How many links? >> ";
+//    int numLinks{};
+//    std::cin >> numLinks;
 
     LinkedList<int> linked{};
-    for (int i{0}; i < numLinks; ++i) {
-        std::cout << "Enter a number >> ";
-        int num{};
-        std::cin >> num;
-        linked.insert(num);
-        // std::cout << linked;
-        std::cout << linked;
-    }
+    // Testing insertion at the beginning of the list
+
+    //    for (int i{0}; i < numLinks; ++i) {
+//        std::cout << "Enter a number >> ";
+//        int num{};
+//        std::cin >> num;
+//        linked.insert(num);
+//        // std::cout << linked;
+//        std::cout << linked;
+//    }
+
+    // Testing insertion at the nth position
+    linked.insert(2, 0);
+    linked.insert(3, 1);
+    linked.insert(4, 0);
+    linked.insert(5, 1);
+//    linked.insert(69, 4);
+    std::cout << linked;
 
 
     return 0;
