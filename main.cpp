@@ -1,5 +1,6 @@
 #include <iostream>
 #include "list.h"
+#include "linkedList.h"
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -12,18 +13,33 @@ void testList() {
     std::cout << list << '\n';
 
     list[9] = 9;
-
     list.insert(8, 2);
     std::cout << list << '\n';
 
     List<int> listTwo;
     listTwo = list;
 
-    std::cout << listTwo <<'\n';
+    std::cout << listTwo << '\n';
 }
 
 int main() {
     // Testing list.h
-    testList();
+//  testList();
+
+    std::cout << "How many links? >> ";
+    int numLinks{};
+    std::cin >> numLinks;
+
+    LinkedList<int> linked{};
+    for (int i{0}; i < numLinks; ++i) {
+        std::cout << "Enter a number >> ";
+        int num{};
+        std::cin >> num;
+        linked.insert(num);
+        // std::cout << linked;
+        std::cout << linked;
+    }
+
+
     return 0;
 }
