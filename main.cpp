@@ -22,33 +22,52 @@ void testList() {
     std::cout << listTwo << '\n';
 }
 
-int main() {
-    // Testing list.h
-//  testList();
-
-//    std::cout << "How many links? >> ";
-//    int numLinks{};
-//    std::cin >> numLinks;
+void testLinkedList() {
 
     LinkedList<int> linked{};
     // Testing insertion at the beginning of the list
-
-    //    for (int i{0}; i < numLinks; ++i) {
-//        std::cout << "Enter a number >> ";
-//        int num{};
-//        std::cin >> num;
-//        linked.insert(num);
-//        // std::cout << linked;
-//        std::cout << linked;
-//    }
-
-    // Testing insertion at the nth position
-    linked.insert(2, 0);
-    linked.insert(3, 1);
-    linked.insert(4, 0);
-    linked.insert(5, 1);
-//    linked.insert(69, 4);
+    std::cout << "Inserting at the beginning of the list\n";
+    linked.insert(12);
     std::cout << linked;
+    linked.insert(18);
+    std::cout << linked;
+    linked.insert(2);
+    std::cout << linked;
+    linked.insert(6);
+    std::cout << linked;
+
+    // Testing insertion at an index
+    std::cout << '\n';
+    std::cout << "Inserting items at a specific index\n";
+    linked.insert(1, 2);
+    std::cout << linked;
+    linked.insert(5, 3);
+    std::cout << linked;
+    linked.insert(26, 4);
+    std::cout << linked;
+    linked.insert(99, 4);
+    std::cout << linked;
+
+    std::cout << '\n';
+    std::cout << "Reversing the list using the iterative method\n";
+    linked.reverseIterative();
+    std::cout << linked;
+
+    std::cout << '\n';
+    std::cout << "Recursive print\n";
+    linked.recursivePrint();
+
+    std::cout << '\n';
+    std::cout << "Recursive reverse print";
+    linked.recursiveReversePrint();
+}
+
+int main() {
+    // Testing list.h
+    //  testList();
+
+    // Testing linkedList.h
+    testLinkedList();
 
 
     return 0;
