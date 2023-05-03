@@ -54,6 +54,11 @@ void testLinkedList() {
     std::cout << linked;
 
     std::cout << '\n';
+    std::cout << "Reversing the list using the recursive method\n";
+    linked.reverseRecursive();
+    std::cout << linked;
+
+    std::cout << '\n';
     std::cout << "Recursive print\n";
     linked.recursivePrint();
 

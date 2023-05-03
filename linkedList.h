@@ -123,6 +123,21 @@ public:
     }
 
 public:
+    void reverseRecursive() { privateReverseRecursive(m_head); }
+
+private:
+    void privateReverseRecursive(Node *node) {
+        if (node->next == nullptr) {
+            m_head = node;
+            return;
+        }
+        privateReverseRecursive(node->next);
+        Node *q{node->next};
+        q->next = node;
+        node->next = nullptr;
+    }
+
+public:
     void recursivePrint() { privateRecursivePrint(m_head); }
 
     void recursiveReversePrint() { privateRecursiveReversePrint(m_head); }
@@ -145,7 +160,6 @@ private:
         privateRecursiveReversePrint(head->next);
         std::cout << head->data << " ";
     }
-
 };
 
 #endif //DATASTRUCTURESANDALGORITHMS_LINKEDLIST_H
