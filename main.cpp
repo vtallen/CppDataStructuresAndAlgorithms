@@ -1,6 +1,7 @@
 #include <iostream>
 #include "list.h"
 #include "linkedList.h"
+#include "doublyLinkedList.h"
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -67,12 +68,45 @@ void testLinkedList() {
     linked.recursiveReversePrint();
 }
 
+void testDoublyLinkedList() {
+    DoublyLinkedList<int> linkedList{};
+
+    std::cout << '\n';
+    std::cout << "Inserting at head\n";
+    linkedList.insertAtHead(2);
+    std::cout << linkedList;
+
+    linkedList.insertAtHead(4);
+    std::cout << linkedList;
+
+    linkedList.insertAtHead(6);
+    std::cout << linkedList;
+
+    std::cout << "\n";
+    std::cout << "Inserting at tail\n";
+    linkedList.insertAtTail(5);
+    std::cout << linkedList;
+
+    linkedList.insertAtTail(100);
+    std::cout << linkedList;
+
+    linkedList.insertAtTail(50);
+    std::cout << linkedList;
+
+    std::cout << '\n';
+    std::cout << "Reverse printing\n";
+    linkedList.reversePrint();
+}
+
 int main() {
     // Testing list.h
     //  testList();
 
     // Testing linkedList.h
-    testLinkedList();
+//    testLinkedList();
+
+    // Testing doublyLinkedList.h
+    testDoublyLinkedList();
 
 
     return 0;
