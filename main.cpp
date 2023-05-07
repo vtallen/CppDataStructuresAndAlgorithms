@@ -2,6 +2,8 @@
 #include "list.h"
 #include "linkedList.h"
 #include "doublyLinkedList.h"
+#include "stack.h"
+
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -106,8 +108,20 @@ int main() {
 //    testLinkedList();
 
     // Testing doublyLinkedList.h
-    testDoublyLinkedList();
+    // testDoublyLinkedList();
 
-
-    return 0;
+  //Testing ArrayStack
+  ArrayStack<int> stack{4};
+  stack.push(100);
+  stack.push(10);
+  stack.push(25);
+  stack.push(4);
+  std::cout << stack;
+  stack.pop();
+  stack.pop();
+  stack.pop();
+  stack.pop();
+  stack.pop();
+  std::cout << stack;
+  return 0;
 }

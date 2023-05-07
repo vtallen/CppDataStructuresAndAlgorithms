@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/DataStructuresAndAlgorithms.dir/main.cpp.o -o DataStructuresAndAlgorithms 
