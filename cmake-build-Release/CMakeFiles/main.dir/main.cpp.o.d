@@ -139,5 +139,5 @@ CMakeFiles/main.dir/main.cpp.o: \
  /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/list.h \
  /usr/include/c++/13/cassert /usr/include/assert.h \
  /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/linkedList.h \
- /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/doublyLinkedList.h \
- /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h
+ /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h \
+ /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/doublyLinkedList.h

@@ -6,7 +6,7 @@
 #define DATASTRUCTURESANDALGORITHMS_LINKEDLIST_H
 
 #include <iostream>
-
+#include "stack.h"
 template<typename T>
 class LinkedList {
 private:
@@ -160,6 +160,26 @@ private:
         privateRecursiveReversePrint(head->next);
         std::cout << head->data << " ";
     }
+public:
+  void reverseWithStack() {
+    if (m_head == nullptr) return;
+    LinkedListStack<Node*> stack;
+    Node *temp{m_head};
+    while (temp != nullptr) {
+      stack.push(temp);
+      temp = temp->next;
+    }
+
+    temp = stack.top();
+    m_head = temp;
+    stack.pop();
+    while (!stack.isEmpty()) {
+      temp->next = stack.top();
+      stack.pop();
+      temp = temp->next;
+    }
+    temp->next = nullptr; 
+  }
 };
 
 #endif //DATASTRUCTURESANDALGORITHMS_LINKEDLIST_H

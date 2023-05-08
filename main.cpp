@@ -63,6 +63,11 @@ void testLinkedList() {
     std::cout << linked;
 
     std::cout << '\n';
+    std::cout << "Reversing the list using the explicit stack method\n";
+    linked.reverseWithStack();
+    std::cout << linked;
+  
+    std::cout << '\n';
     std::cout << "Recursive print\n";
     linked.recursivePrint();
 
@@ -161,21 +166,16 @@ void testReverseString() {
 }
 
 int main() {
-    // Testing list.h
-    //  testList();
-
-    // Testing linkedList.h
-//    testLinkedList();
-
-    // Testing doublyLinkedList.h
-    // testDoublyLinkedList();
-
-  //Testing ArrayStack
-  // testArrayStack(); 
-  //
-  
-  // testLinkedListStack();
-  // reverseString(myString, 5);
   testReverseString();
+  testLinkedList(); 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
   return 0;
 }

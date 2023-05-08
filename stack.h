@@ -52,12 +52,19 @@ public:
     m_top = m_top->next;
     delete temp;
   }
+  
+  bool isEmpty() {
+    return m_top == nullptr;
+  }
 
   T top() {
     if (m_top == nullptr) return T{};
     return m_top->data;
   }
 
+  T *topPtr() {
+    return m_top;
+  }
 
 };
 
