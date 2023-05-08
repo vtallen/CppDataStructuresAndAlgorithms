@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 #include "list.h"
 #include "linkedList.h"
@@ -120,6 +121,45 @@ void testArrayStack() {
   std::cout << stack; 
   std::cout << '\n';
 }
+
+void testLinkedListStack() {
+  LinkedListStack<int> stack;
+  std::cout << "\nPushing items\n";
+  stack.push(4);
+  stack.push(6);
+  stack.push(19);
+  stack.push(25);
+  std::cout << stack;
+
+  std::cout << "\nPopping items\n";
+  stack.pop();
+  stack.pop();
+  std::cout << stack;
+
+  std::cout << "\nTop item: " << stack.top() << '\n';
+
+}
+
+void reverseString(char* string, int length) {
+  LinkedListStack<char> stack;
+  for (int i{0}; i < length; ++i) {
+    stack.push(string[i]);
+  }
+  std::cout << stack; 
+  for (int i{0}; i < length; ++i) {
+    string[i] = stack.top();
+    stack.pop();
+  }
+}
+
+void testReverseString() {
+  std::cout << "\nReversing a string: Hello World!\n";
+  char string[] = "Hello World!\0";
+  reverseString(string, 13);
+  std::cout << string;
+
+}
+
 int main() {
     // Testing list.h
     //  testList();
@@ -133,12 +173,9 @@ int main() {
   //Testing ArrayStack
   // testArrayStack(); 
   //
-  LinkedListStack<int> stack;
-  stack.push(4);
-  stack.push(6);
-  stack.push(19);
-  stack.push(25);
   
-
+  // testLinkedListStack();
+  // reverseString(myString, 5);
+  testReverseString();
   return 0;
 }

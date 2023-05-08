@@ -24,12 +24,21 @@ public:
     Node *temp{m_top};
     Node *next{};
     while (temp != nullptr) {
-      std::cout << "Visiting node\n";
       next = temp->next;
       delete temp;
       temp = next;
     }
   }
+
+  friend std::ostream &operator<<(std::ostream &out, LinkedListStack<T> &stack) {
+    Node *temp{stack.m_top};
+    while (temp != nullptr) {
+      out << temp->data << " ";
+      temp = temp->next;
+    }
+    return out;
+  }
+
   void push(const T data) {
     Node *temp{new Node{}};
     temp->data = data;
