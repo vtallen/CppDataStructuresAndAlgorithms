@@ -1,8 +1,7 @@
-// Need to add copy constructors
-#ifndef STACK_H
-#define STACK_H
-
-#include <stdexcept>
+// Need to add copy constructors 
+#ifndef STACK_H 
+#define STACK_H 
+#include <stdexcept> 
 #include <iostream>
 
 template<typename T>
@@ -72,7 +71,7 @@ template<typename T>
 class ArrayStack {
 private:
   T *m_array {nullptr};
-  int m_arraySize{};
+  const int m_arraySize{};
   int m_top{-1};
 
 public:
@@ -104,7 +103,6 @@ public:
       std::cout << "No element to pop";
       return;
     }
-    --m_arraySize;
     --m_top;
   }
   void push(const T data) {
@@ -116,6 +114,9 @@ public:
     m_array[++m_top] = data;
   }
   
+  bool isEmpty() {
+    return m_top == -1;
+  }
 };
 
 

@@ -145,7 +145,7 @@ void testLinkedListStack() {
 
 }
 
-void reverseString(char* string, int length) {
+void reverseString(char *string, int length) {
   LinkedListStack<char> stack;
   for (int i{0}; i < length; ++i) {
     stack.push(string[i]);
@@ -162,20 +162,29 @@ void testReverseString() {
   char string[] = "Hello World!\0";
   reverseString(string, 13);
   std::cout << string;
+}
 
+bool checkForBalancedParentheses(const char *string, int length) {
+  LinkedListStack<char> stack{};
+  
+  for (int i{0}; i < length; ++i) {
+    char currentChar{string[i]};
+    if ((currentChar == '(') || (currentChar == '{') || (currentChar == '[')) stack.push(currentChar);
+    else if ((currentChar == ')') || (currentChar == '}') || (currentChar == ']')) {
+      if (stack.isEmpty()) return false;
+      else stack.pop();
+    }
+  }
+
+  return stack.isEmpty();
 }
 
 int main() {
-  testReverseString();
-  testLinkedList(); 
- 
- 
+  // testReverseString();
+  // testLinkedList(); 
+  const char *string{"()())"};
 
- 
- 
- 
+  std::cout << checkForBalancedParentheses(string, 5);
 
- 
- 
   return 0;
 }
