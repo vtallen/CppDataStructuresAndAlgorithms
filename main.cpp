@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 #include "list.h"
 #include "linkedList.h"
@@ -62,6 +63,11 @@ void testLinkedList() {
     std::cout << linked;
 
     std::cout << '\n';
+    std::cout << "Reversing the list using the explicit stack method\n";
+    linked.reverseWithStack();
+    std::cout << linked;
+  
+    std::cout << '\n';
     std::cout << "Recursive print\n";
     linked.recursivePrint();
 
@@ -100,28 +106,76 @@ void testDoublyLinkedList() {
     linkedList.reversePrint();
 }
 
-int main() {
-    // Testing list.h
-    //  testList();
-
-    // Testing linkedList.h
-//    testLinkedList();
-
-    // Testing doublyLinkedList.h
-    // testDoublyLinkedList();
-
-  //Testing ArrayStack
-  ArrayStack<int> stack{4};
-  stack.push(100);
-  stack.push(10);
-  stack.push(25);
+void testArrayStack() {
+  ArrayStack<int> stack{5}; 
+  std::cout << '\n';
+  std::cout << "Pushing items\n";
+  stack.push(1);
+  stack.push(2);
+  stack.push(3);
   stack.push(4);
+  stack.push(5);
   std::cout << stack;
+  std::cout << '\n';
+  std::cout << "Top item " << stack.top();
+  std::cout << '\n';
+  std::cout << "Popping 3 items\n";
   stack.pop();
   stack.pop();
   stack.pop();
+  std::cout << stack; 
+  std::cout << '\n';
+}
+
+void testLinkedListStack() {
+  LinkedListStack<int> stack;
+  std::cout << "\nPushing items\n";
+  stack.push(4);
+  stack.push(6);
+  stack.push(19);
+  stack.push(25);
+  std::cout << stack;
+
+  std::cout << "\nPopping items\n";
   stack.pop();
   stack.pop();
   std::cout << stack;
+
+  std::cout << "\nTop item: " << stack.top() << '\n';
+
+}
+
+void reverseString(char* string, int length) {
+  LinkedListStack<char> stack;
+  for (int i{0}; i < length; ++i) {
+    stack.push(string[i]);
+  }
+  std::cout << stack; 
+  for (int i{0}; i < length; ++i) {
+    string[i] = stack.top();
+    stack.pop();
+  }
+}
+
+void testReverseString() {
+  std::cout << "\nReversing a string: Hello World!\n";
+  char string[] = "Hello World!\0";
+  reverseString(string, 13);
+  std::cout << string;
+
+}
+
+int main() {
+  testReverseString();
+  testLinkedList(); 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
   return 0;
 }

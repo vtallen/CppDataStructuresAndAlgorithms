@@ -3,8 +3,7 @@
 
 CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/main.cpp \
   /usr/include/stdc-predef.h \
-  /usr/include/c++/13/iostream \
-  /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/cstring \
   /usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h \
   /usr/include/bits/wordsize.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h \
@@ -17,6 +16,14 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
   /usr/include/gnu/stubs-64.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/string.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/strings.h \
+  /usr/include/c++/13/iostream \
+  /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
@@ -25,10 +32,8 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/cwchar \
   /usr/include/wchar.h \
-  /usr/include/bits/libc-header-start.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/floatn-common.h \
-  /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h \
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/types/wint_t.h \
@@ -36,8 +41,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/FILE.h \
-  /usr/include/bits/types/locale_t.h \
-  /usr/include/bits/types/__locale_t.h \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_ptr.h \
@@ -201,8 +204,8 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
   /usr/include/c++/13/cassert \
   /usr/include/assert.h \
   /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/linkedList.h \
-  /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/doublyLinkedList.h \
-  /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h
+  /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h \
+  /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/doublyLinkedList.h
 
 
 /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/linkedList.h:
@@ -275,9 +278,15 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/include/c++/13/bits/basic_string.h:
 
-/usr/include/c++/13/bits/ptr_traits.h:
+/usr/include/c++/13/initializer_list:
 
-/usr/include/c++/13/bits/iterator_concepts.h:
+/usr/include/c++/13/system_error:
+
+/usr/include/c++/13/bits/range_access.h:
+
+/usr/include/c++/13/bits/invoke.h:
+
+/usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
 
@@ -339,35 +348,21 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/include/bits/types.h:
 
-/usr/include/c++/13/debug/assertions.h:
-
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/types/__locale_t.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h:
-
-/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/list.h:
-
-/usr/include/sched.h:
-
 /usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h:
 
-/usr/include/bits/libc-header-start.h:
+/usr/include/bits/floatn-common.h:
 
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
+/usr/include/bits/floatn.h:
 
-/usr/include/c++/13/cwctype:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/locale.h:
+/usr/include/c++/13/cwchar:
 
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/c++/13/bits/move.h:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/bits/stl_function.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
 
@@ -377,23 +372,29 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/include/features-time64.h:
 
+/usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/list.h:
+
+/usr/include/sched.h:
+
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/bits/stdlib-bsearch.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
 
-/usr/include/c++/13/cwchar:
+/usr/include/c++/13/cstring:
 
-/usr/include/c++/13/iostream:
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
-/usr/include/c++/13/compare:
+/usr/include/c++/13/cwctype:
 
-/usr/include/sys/single_threaded.h:
+/usr/include/bits/types/wint_t.h:
 
-/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h:
-
-/usr/include/c++/13/ext/type_traits.h:
+/usr/include/locale.h:
 
 /usr/include/bits/types/FILE.h:
 
@@ -425,23 +426,13 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/include/c++/13/bits/new_allocator.h:
 
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
+/usr/include/c++/13/bits/iterator_concepts.h:
 
-/usr/include/c++/13/typeinfo:
+/usr/include/string.h:
 
-/usr/include/c++/13/ios:
+/usr/include/bits/stdlib-float.h:
 
-/usr/include/bits/floatn.h:
-
-/usr/include/c++/13/bits/stl_function.h:
-
-/usr/include/c++/13/bits/utility.h:
-
-/usr/include/c++/13/bits/stringfwd.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/c++/13/backward/binders.h:
+/usr/include/bits/time64.h:
 
 /usr/include/alloca.h:
 
@@ -467,7 +458,43 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:
 
-/usr/include/bits/floatn-common.h:
+/usr/include/bits/libc-header-start.h:
+
+/usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/bits/types/struct_timeval.h:
+
+/usr/include/c++/13/bits/concept_check.h:
+
+/usr/include/c++/13/iostream:
+
+/usr/include/c++/13/compare:
+
+/usr/include/sys/single_threaded.h:
+
+/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h:
+
+/usr/include/c++/13/ext/type_traits.h:
+
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/c++/13/ios:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/c++/13/backward/binders.h:
+
+/usr/include/c++/13/debug/assertions.h:
+
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/strings.h:
 
 /usr/include/c++/13/x86_64-redhat-linux/bits/c++locale.h:
 
@@ -494,10 +521,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 /usr/include/c++/13/x86_64-redhat-linux/bits/gthr-default.h:
 
 /usr/include/bits/cpu-set.h:
-
-/usr/include/bits/stdlib-float.h:
-
-/usr/include/bits/time64.h:
 
 /usr/include/features.h:
 
@@ -553,12 +576,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/include/bits/timex.h:
 
-/usr/include/c++/13/bits/alloc_traits.h:
-
-/usr/include/c++/13/bits/concept_check.h:
-
-/usr/include/bits/types/struct_timeval.h:
-
 /usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/pthreadtypes.h:
@@ -599,12 +616,4 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 
 /usr/include/c++/13/debug/debug.h:
 
-/usr/include/c++/13/system_error:
-
-/usr/include/c++/13/bits/range_access.h:
-
 /usr/include/c++/13/bits/refwrap.h:
-
-/usr/include/c++/13/bits/invoke.h:
-
-/usr/include/c++/13/initializer_list:
