@@ -100,6 +100,26 @@ void testDoublyLinkedList() {
     linkedList.reversePrint();
 }
 
+void testArrayStack() {
+  ArrayStack<int> stack{5}; 
+  std::cout << '\n';
+  std::cout << "Pushing items\n";
+  stack.push(1);
+  stack.push(2);
+  stack.push(3);
+  stack.push(4);
+  stack.push(5);
+  std::cout << stack;
+  std::cout << '\n';
+  std::cout << "Top item " << stack.top();
+  std::cout << '\n';
+  std::cout << "Popping 3 items\n";
+  stack.pop();
+  stack.pop();
+  stack.pop();
+  std::cout << stack; 
+  std::cout << '\n';
+}
 int main() {
     // Testing list.h
     //  testList();
@@ -111,17 +131,14 @@ int main() {
     // testDoublyLinkedList();
 
   //Testing ArrayStack
-  ArrayStack<int> stack{4};
-  stack.push(100);
-  stack.push(10);
-  stack.push(25);
+  // testArrayStack(); 
+  //
+  LinkedListStack<int> stack;
   stack.push(4);
-  std::cout << stack;
-  stack.pop();
-  stack.pop();
-  stack.pop();
-  stack.pop();
-  stack.pop();
-  std::cout << stack;
+  stack.push(6);
+  stack.push(19);
+  stack.push(25);
+  
+
   return 0;
 }
