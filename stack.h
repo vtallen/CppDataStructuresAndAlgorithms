@@ -1,8 +1,7 @@
-// Need to add copy constructors
-#ifndef STACK_H
-#define STACK_H
-
-#include <stdexcept>
+// Need to add copy constructors 
+#ifndef STACK_H 
+#define STACK_H 
+#include <stdexcept> 
 #include <iostream>
 
 template<typename T>
@@ -46,11 +45,15 @@ public:
     m_top = temp;
   }
   
-  void pop() {
-    if (m_top == nullptr) return;
+  T pop() {
+    if (m_top == nullptr) return T{};
     Node *temp{m_top};
+    T topData{m_top->data};
+
     m_top = m_top->next;
     delete temp;
+
+    return topData;
   }
   
   bool isEmpty() {
@@ -72,7 +75,7 @@ template<typename T>
 class ArrayStack {
 private:
   T *m_array {nullptr};
-  int m_arraySize{};
+  const int m_arraySize{};
   int m_top{-1};
 
 public:
@@ -99,13 +102,15 @@ public:
     return m_array[m_top];
   }
   
-  void pop() {
+  T pop() {
     if (m_top == -1) {
       std::cout << "No element to pop";
-      return;
+      return T{};
     }
-    --m_arraySize;
+    T topValue{m_array[m_top]};
     --m_top;
+
+    return topValue;
   }
   void push(const T data) {
     // Unsure if I need to subtrack 1 from m_arraySize
@@ -116,6 +121,9 @@ public:
     m_array[++m_top] = data;
   }
   
+  bool isEmpty() {
+    return m_top == -1;
+  }
 };
 
 

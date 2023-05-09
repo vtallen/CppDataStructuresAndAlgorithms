@@ -1,10 +1,11 @@
 #include <cstring>
 #include <iostream>
 #include "list.h"
+
 #include "linkedList.h"
 #include "doublyLinkedList.h"
 #include "stack.h"
-
+#include "infixPrefixPostfix.h"
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -145,7 +146,7 @@ void testLinkedListStack() {
 
 }
 
-void reverseString(char* string, int length) {
+void reverseString(char *string, int length) {
   LinkedListStack<char> stack;
   for (int i{0}; i < length; ++i) {
     stack.push(string[i]);
@@ -162,20 +163,26 @@ void testReverseString() {
   char string[] = "Hello World!\0";
   reverseString(string, 13);
   std::cout << string;
+}
 
+bool checkForBalancedParentheses(const char *string, int length) {
+  LinkedListStack<char> stack{};
+  
+  for (int i{0}; i < length; ++i) {
+    char currentChar{string[i]};
+    if ((currentChar == '(') || (currentChar == '{') || (currentChar == '[')) stack.push(currentChar);
+    else if ((currentChar == ')') || (currentChar == '}') || (currentChar == ']')) {
+      if (stack.isEmpty()) return false;
+      else stack.pop();
+    }
+  }
+
+  return stack.isEmpty();
 }
 
 int main() {
-  testReverseString();
-  testLinkedList(); 
- 
- 
+  evaluatePostfix("23 3 * 5 4 * + 9 -"); 
 
- 
- 
- 
 
- 
- 
   return 0;
 }
