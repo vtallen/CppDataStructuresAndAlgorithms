@@ -4,6 +4,7 @@
 
 #ifndef DATASTRUCTURESANDALGORITHMS_DOUBLYLINKEDLIST_H
 #define DATASTRUCTURESANDALGORITHMS_DOUBLYLINKEDLIST_H
+#include <iostream>
 
 template<typename T>
 class DoublyLinkedList {

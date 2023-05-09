@@ -8,8 +8,59 @@
 
 #include "stack.h"
 
+double evaluatePrefix(std::string_view expression) {
+  std::stringstream stringStream{};
+  int length{static_cast<int>(expression.length())};
+  std::cout << "Length: " << length;
+
+  LinkedListStack<double> operands;
+
+  for (int i{length - 1}; i >= 0; --i) {
+    char currentChar{expression[i]};
+
+    if ((currentChar == '+') || (currentChar == '-') || (currentChar == '*') || (currentChar == '/')) {
+      std::cout << "Operator: " << currentChar << " ";
+      double op1{operands.pop()};
+      double op2{operands.pop()};
+      double result{};
+      
+      switch(currentChar) {
+        case '+':
+          result = (op1 + op2);
+          break;
+        case '-':
+          result = (op1 - op2);
+          break;
+        case '*':
+          result = (op1 * op2);
+          break;
+        case '/':
+          result = (op1 / op2);
+          break;
+        default:
+          throw std::invalid_argument("An invalid postfix expression was passed");
+      }
+      std::cout << "Result: " << result << '\n';
+      operands.push(result); 
+      // Skip past the next space
+      --i;
+    } else {
+      if (currentChar == ' ') {
+        double value{};
+        stringStream >> value;
+        std::cout << "Val: " << value << " ";
+        operands.push(value);
+        stringStream.clear();
+      } else {
+        std::cout << "Char: " << currentChar << " ";
+        stringStream << currentChar;
+      }
+    }
+  }
+  return operands.top();
+}
+
 double evaluatePostfix(std::string_view expression) {
-  double result{};
   LinkedListStack<double> operands;
   std::stringstream stringStream{};
   std::size_t length{expression.size()};
@@ -18,11 +69,11 @@ double evaluatePostfix(std::string_view expression) {
     char currentChar{expression[i]};
 
     if ((currentChar == '+') || (currentChar == '-') || (currentChar == '*') || (currentChar == '/')) {
-      std::cout << "operator ";
-
       double op2{operands.pop()};
       double op1{operands.pop()};
-      
+     
+      double result{};
+
       switch(currentChar) {
         case '+':
           result += (op1 + op2);
@@ -39,7 +90,7 @@ double evaluatePostfix(std::string_view expression) {
         default:
           throw std::invalid_argument("An invalid postfix expression was passed");
       }
-
+      operands.push(result);
       // Skip past the next space in the string
       ++i;
       
@@ -48,7 +99,6 @@ double evaluatePostfix(std::string_view expression) {
         int value{};
         stringStream >> value;
         operands.push(value);
-        std::cout << "Val: " << value << '\n';
         stringStream.clear();
       } else {
         stringStream << currentChar;
@@ -57,9 +107,5 @@ double evaluatePostfix(std::string_view expression) {
       
     }
   }
-  
-  std::cout << '\n';
-  std::cout << operands;
-  std::cout << result;
-  return result;
+  return operands.top();  
 }

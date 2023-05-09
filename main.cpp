@@ -181,8 +181,9 @@ bool checkForBalancedParentheses(const char *string, int length) {
 }
 
 int main() {
-  evaluatePostfix("23 3 * 5 4 * + 9 -"); 
-
+  // evaluatePostfix("23 3 * 5 4 * + 9 -"); 
+  //
+  std::cout << evaluatePrefix("- + * 2 3 + 5 4 9");
 
   return 0;
 }
