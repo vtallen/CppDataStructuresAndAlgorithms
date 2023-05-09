@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+infixPrefixPostfix.o: infixPrefixPostfix.cpp.o
+.PHONY : infixPrefixPostfix.o
+
+# target to build an object file
+infixPrefixPostfix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/infixPrefixPostfix.cpp.o
+.PHONY : infixPrefixPostfix.cpp.o
+
+infixPrefixPostfix.i: infixPrefixPostfix.cpp.i
+.PHONY : infixPrefixPostfix.i
+
+# target to preprocess a source file
+infixPrefixPostfix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/infixPrefixPostfix.cpp.i
+.PHONY : infixPrefixPostfix.cpp.i
+
+infixPrefixPostfix.s: infixPrefixPostfix.cpp.s
+.PHONY : infixPrefixPostfix.s
+
+# target to generate assembly for a file
+infixPrefixPostfix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/infixPrefixPostfix.cpp.s
+.PHONY : infixPrefixPostfix.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... infixPrefixPostfix.o"
+	@echo "... infixPrefixPostfix.i"
+	@echo "... infixPrefixPostfix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

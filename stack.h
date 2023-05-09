@@ -45,11 +45,15 @@ public:
     m_top = temp;
   }
   
-  void pop() {
-    if (m_top == nullptr) return;
+  T pop() {
+    if (m_top == nullptr) return T{};
     Node *temp{m_top};
+    T topData{m_top->data};
+
     m_top = m_top->next;
     delete temp;
+
+    return topData;
   }
   
   bool isEmpty() {
@@ -98,12 +102,15 @@ public:
     return m_array[m_top];
   }
   
-  void pop() {
+  T pop() {
     if (m_top == -1) {
       std::cout << "No element to pop";
-      return;
+      return T{};
     }
+    T topValue{m_array[m_top]};
     --m_top;
+
+    return topValue;
   }
   void push(const T data) {
     // Unsure if I need to subtrack 1 from m_arraySize

@@ -9,4 +9,7 @@ add_executable(main
   linkedList.h 
   doublyLinkedList.h
   stack.h
+
+  infixPrefixPostfix.cpp
+  infixPrefixPostfix.h
   )

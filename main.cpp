@@ -1,10 +1,11 @@
 #include <cstring>
 #include <iostream>
 #include "list.h"
+
 #include "linkedList.h"
 #include "doublyLinkedList.h"
 #include "stack.h"
-
+#include "infixPrefixPostfix.h"
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -180,11 +181,8 @@ bool checkForBalancedParentheses(const char *string, int length) {
 }
 
 int main() {
-  // testReverseString();
-  // testLinkedList(); 
-  const char *string{"()())"};
+  evaluatePostfix("23 3 * 5 4 * + 9 -"); 
 
-  std::cout << checkForBalancedParentheses(string, 5);
 
   return 0;
 }
