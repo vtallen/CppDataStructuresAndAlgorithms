@@ -408,6 +408,9 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
   /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/doublyLinkedList.h \
   /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/infixPrefixPostfix.h
 
+CMakeFiles/main.dir/queue.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/queue.cpp \
+  /usr/include/stdc-predef.h
+
 
 /home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/infixPrefixPostfix.h:
 
@@ -792,6 +795,8 @@ CMakeFiles/main.dir/main.cpp.o: /home/vtallen/Nextcloud/Programming/Cpp/DataStru
 /usr/include/c++/13/backward/binders.h:
 
 /usr/include/bits/select.h:
+
+/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/queue.cpp:
 
 /usr/include/stdlib.h:
 

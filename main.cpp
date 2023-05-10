@@ -1,3 +1,6 @@
+// Things to go back over
+//    - Infix to postfix 4:15:00
+
 #include <cstring>
 #include <iostream>
 #include "list.h"
@@ -183,7 +186,7 @@ bool checkForBalancedParentheses(const char *string, int length) {
 int main() {
   // evaluatePostfix("23 3 * 5 4 * + 9 -"); 
   //
-  std::cout << evaluatePrefix("- + * 2 3 + 5 4 9");
 
+  std::cout << infixToPostfix("9 + 10 + 11"); 
   return 0;
 }

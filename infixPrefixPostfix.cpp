@@ -8,6 +8,33 @@
 
 #include "stack.h"
 
+std::string infixToPostfix(std::string_view expression) {
+  LinkedListStack<char> operators;
+  std::stringstream stringStream{};
+  
+  std::string resultString{};
+
+  for (int i{0}; i < expression.length(); ++i) {
+    char currentChar{expression[i]};
+    
+    if (!((currentChar == '+') || (currentChar == '-') || (currentChar == '*') || (currentChar == '/') || (currentChar == ' '))) {
+      std::string currentNum{}; 
+      while ((currentChar != ' ') && (i < expression.length()) && ((currentChar == '+') || (currentChar == '-') || (currentChar == '*') || (currentChar == '/'))) {
+        currentChar = expression[i]; 
+        stringStream << currentChar;
+        ++i;
+      } 
+      
+      stringStream >> currentNum;
+      resultString.append(currentNum);
+    } else {
+      std::cout << currentChar; 
+    }
+  }
+
+  return resultString;
+}
+
 double evaluatePrefix(std::string_view expression) {
   std::stringstream stringStream{};
   int length{static_cast<int>(expression.length())};

@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/infixPrefixPostfix.cpp" "CMakeFiles/main.dir/infixPrefixPostfix.cpp.o" "gcc" "CMakeFiles/main.dir/infixPrefixPostfix.cpp.o.d"
   "/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
+  "/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/queue.cpp" "CMakeFiles/main.dir/queue.cpp.o" "gcc" "CMakeFiles/main.dir/queue.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

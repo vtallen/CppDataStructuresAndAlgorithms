@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/infixPrefixPostfix.cpp.o.d"
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/main.cpp.o.d"
+  "CMakeFiles/main.dir/queue.cpp.o"
+  "CMakeFiles/main.dir/queue.cpp.o.d"
   "main"
   "main.pdb"
 )

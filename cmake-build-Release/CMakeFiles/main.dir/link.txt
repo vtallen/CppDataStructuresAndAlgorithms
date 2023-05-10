@@ -1,1 +1,1 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/infixPrefixPostfix.cpp.o -o main 
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/infixPrefixPostfix.cpp.o CMakeFiles/main.dir/queue.cpp.o -o main 

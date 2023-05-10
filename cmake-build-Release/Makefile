@@ -177,6 +177,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+queue.o: queue.cpp.o
+.PHONY : queue.o
+
+# target to build an object file
+queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.o
+.PHONY : queue.cpp.o
+
+queue.i: queue.cpp.i
+.PHONY : queue.i
+
+# target to preprocess a source file
+queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.i
+.PHONY : queue.cpp.i
+
+queue.s: queue.cpp.s
+.PHONY : queue.s
+
+# target to generate assembly for a file
+queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.s
+.PHONY : queue.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... queue.o"
+	@echo "... queue.i"
+	@echo "... queue.s"
 .PHONY : help
 
 

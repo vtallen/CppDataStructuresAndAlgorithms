@@ -12,4 +12,6 @@ add_executable(main
 
   infixPrefixPostfix.cpp
   infixPrefixPostfix.h
-  )
+
+  queue.cpp
+)
