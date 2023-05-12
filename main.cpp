@@ -1,3 +1,7 @@
+// Things to go back over
+//    - Infix to postfix 4:15:00
+//    - Write a destructor for classes in queue.h
+
 #include <cstring>
 #include <iostream>
 #include "list.h"
@@ -6,6 +10,7 @@
 #include "doublyLinkedList.h"
 #include "stack.h"
 #include "infixPrefixPostfix.h"
+#include "queue.h"
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -180,9 +185,37 @@ bool checkForBalancedParentheses(const char *string, int length) {
   return stack.isEmpty();
 }
 
+
+
 int main() {
-  evaluatePostfix("23 3 * 5 4 * + 9 -"); 
+  // evaluatePostfix("23 3 * 5 4 * + 9 -"); 
+  //
+  ArrayQueue<int> test{10};
+  test.enQueue(11);
+  test.enQueue(9);
+  test.enQueue(9);
+  test.enQueue(9);
+  test.enQueue(9);
+  test.enQueue(9);
+  test.enQueue(9);
+  test.enQueue(9);
+  test.enQueue(10);
+  test.enQueue(25);
 
+  test.deQueue();
+  test.enQueue(45);
 
+  
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+  test.deQueue();
+
+  std::cout << test.front();
   return 0;
 }

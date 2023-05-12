@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

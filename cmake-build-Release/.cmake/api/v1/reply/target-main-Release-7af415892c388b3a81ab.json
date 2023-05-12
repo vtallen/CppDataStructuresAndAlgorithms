@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -std=gnu++23"
+					"fragment" : "-O3 -DNDEBUG -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk"
 				}
 			],
 			"language" : "CXX",
@@ -95,7 +95,8 @@
 				2,
 				3,
 				4,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -136,6 +137,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "infixPrefixPostfix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "queue.h",
 			"sourceGroupIndex" : 1
 		}
 	],
