@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vtallen/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/main.cpp" "CMakeFiles/DataStructuresAndAlgorithms.dir/main.cpp.o" "gcc" "CMakeFiles/DataStructuresAndAlgorithms.dir/main.cpp.o.d"
+  "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/infixPrefixPostfix.cpp" "CMakeFiles/main.dir/infixPrefixPostfix.cpp.o" "gcc" "CMakeFiles/main.dir/infixPrefixPostfix.cpp.o.d"
+  "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

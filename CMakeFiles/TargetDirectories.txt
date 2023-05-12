@@ -1,0 +1,3 @@
+/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/CMakeFiles/main.dir
+/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/CMakeFiles/edit_cache.dir
+/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/CMakeFiles/rebuild_cache.dir
