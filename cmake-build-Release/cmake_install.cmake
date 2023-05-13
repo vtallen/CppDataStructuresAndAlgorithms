@@ -1,4 +1,4 @@
-# Install script for directory: /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms
+# Install script for directory: /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/cmake-build-Release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

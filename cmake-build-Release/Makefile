@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.26.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms
+CMAKE_SOURCE_DIR = /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release
+CMAKE_BINARY_DIR = /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/cmake-build-Release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release/CMakeFiles /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/cmake-build-Release/CMakeFiles /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/cmake-build-Release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/cmake-build-Release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

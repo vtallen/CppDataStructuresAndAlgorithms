@@ -12,6 +12,7 @@ add_executable(main
 
   infixPrefixPostfix.cpp
   infixPrefixPostfix.h
-
+  
+  binarySearchTree.h
   queue.h
 )

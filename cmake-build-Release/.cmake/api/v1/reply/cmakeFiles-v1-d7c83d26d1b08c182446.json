@@ -150,8 +150,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/cmake-build-Release",
-		"source" : "/volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms"
+		"build" : "/volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/cmake-build-Release",
+		"source" : "/volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms"
 	},
 	"version" : 
 	{

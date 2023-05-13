@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/infixPrefixPostfix.cpp.o: \
-  /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/infixPrefixPostfix.cpp \
+  /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/infixPrefixPostfix.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -732,4 +732,4 @@ CMakeFiles/main.dir/infixPrefixPostfix.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream \
-  /volumes/External/Nextcloud/Programming/Cpp/DataStructuresAndAlgorithms/stack.h
+  /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/stack.h

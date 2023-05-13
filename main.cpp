@@ -1,6 +1,7 @@
 // Things to go back over
 //    - Infix to postfix 4:15:00
 //    - Write a destructor for classes in queue.h
+//    - Write a test function for ArrayQueue
 
 #include <cstring>
 #include <iostream>
@@ -11,6 +12,7 @@
 #include "stack.h"
 #include "infixPrefixPostfix.h"
 #include "queue.h"
+#include "binarySearchTree.h"
 
 void testList() {
     std::cout << "Testing list.h" << '\n';
@@ -185,37 +187,21 @@ bool checkForBalancedParentheses(const char *string, int length) {
   return stack.isEmpty();
 }
 
+void testArrayQueue() {
 
-
-int main() {
-  // evaluatePostfix("23 3 * 5 4 * + 9 -"); 
   //
   ArrayQueue<int> test{10};
-  test.enQueue(11);
-  test.enQueue(9);
-  test.enQueue(9);
-  test.enQueue(9);
-  test.enQueue(9);
-  test.enQueue(9);
-  test.enQueue(9);
-  test.enQueue(9);
-  test.enQueue(10);
-  test.enQueue(25);
+}
 
-  test.deQueue();
-  test.enQueue(45);
-
+int main() {
   
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
-  test.deQueue();
+  BinarySearchTree<int> bst;
 
-  std::cout << test.front();
+  bst.insert(11);
+  bst.insert(20);
+  
+  if (bst.search(10)) std::cout << "Found 10\n";
+  else std::cout << "Did not find 10";
+
   return 0;
 }
