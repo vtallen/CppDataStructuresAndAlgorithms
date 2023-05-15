@@ -1,5 +1,7 @@
 #ifndef BINARYSEARCHTREE_H
 #define BINARYSEARCHTREE_H
+#include <iostream>
+
 template<typename T>
 class BinarySearchTree {
 private:
@@ -20,7 +22,6 @@ public:
 
   ~BinarySearchTree() = default;
 private:
-
   BstNode *privateInsert(BstNode* currentNode, T data) {
     if (currentNode == nullptr) {
       currentNode = getNewNode(data);
@@ -49,6 +50,35 @@ public:
 
   bool search(T data) {
     return privateSearch(m_rootPtr, data); 
+  }
+
+  T min() {
+    if (m_rootPtr == nullptr) {
+      std::cout << "BST is empty, no min value";
+      return T{};
+    } 
+    BstNode *current{m_rootPtr};
+
+    while(current->left != nullptr) {
+      current = current->left;
+    }
+
+    return current->data;
+  }
+
+  T max() {
+    if (m_rootPtr == nullptr) {
+      std::cout << "BST is empty, no min value";
+      return T{};
+    }
+
+    BstNode *current{m_rootPtr};
+
+    while (current->right != nullptr) {
+      current = current->right;
+    }
+
+    return current->data;
   }
 };
 

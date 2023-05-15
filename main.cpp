@@ -199,9 +199,15 @@ int main() {
 
   bst.insert(11);
   bst.insert(20);
-  
+  bst.insert(100);
+  bst.insert(210);  
+  bst.insert(1);  
+  bst.insert(99);  
+  bst.insert(76);  
   if (bst.search(10)) std::cout << "Found 10\n";
-  else std::cout << "Did not find 10";
-
+  else std::cout << "Did not find 10\n";
+  
+  std::cout << "min value: " << bst.min() << '\n';
+  std::cout << "max value: " << bst.max();
   return 0;
 }
