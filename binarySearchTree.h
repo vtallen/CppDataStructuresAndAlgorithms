@@ -43,6 +43,12 @@ private:
     else return privateSearch(currentNode->right, data);
   }
 
+  int privateHeight(BstNode *currentNode) {
+    if (currentNode == nullptr) return -1;
+
+    return std::max(privateHeight(currentNode->left), privateHeight(currentNode->right)) + 1;
+  }
+
 public:
   void insert(T data) {
     m_rootPtr = privateInsert(m_rootPtr, data);  
@@ -79,6 +85,10 @@ public:
     }
 
     return current->data;
+  }
+
+  int height() {
+    return privateHeight(m_rootPtr);
   }
 };
 
