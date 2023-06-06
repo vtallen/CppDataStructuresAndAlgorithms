@@ -737,4 +737,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/doublyLinkedList.h \
   /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/infixPrefixPostfix.h \
   /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/queue.h \
-  /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/binarySearchTree.h
+  /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/binarySearchTree.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque

@@ -197,17 +197,27 @@ int main() {
   
   BinarySearchTree<int> bst;
 
-  bst.insert(11);
+  // bst.levelOrderTraversal();
   bst.insert(20);
-  bst.insert(100);
-  bst.insert(210);  
-  bst.insert(1);  
-  bst.insert(99);  
-  bst.insert(76);  
-  if (bst.search(10)) std::cout << "Found 10\n";
-  else std::cout << "Did not find 10\n";
+  bst.insert(22);
+  bst.insert(23);
+  bst.insert(21);
+  bst.insert(10);
+  bst.insert(8);
+  bst.insert(9);
   
+  std::cout << (*bst.inOrderSuccessor(10)).data;
+  bst.preOrderTraversal();
   std::cout << "min value: " << bst.min() << '\n';
-  std::cout << "max value: " << bst.max();
+  std::cout << "max value: " << bst.max() << '\n';
+  std::cout << bst.isBinarySearchTree();
+
+  std::cout << '\n';
+  
+  bst.deleteNode(10);
+  bst.deleteNode(22);
+  bst.deleteNode(20);
+  bst.inOrderTraversal();
+
   return 0;
 }

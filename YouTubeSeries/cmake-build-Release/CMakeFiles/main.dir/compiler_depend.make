@@ -1474,8 +1474,12 @@ CMakeFiles/main.dir/main.cpp.o: /volumes/External/Nextcloud/Programming/C/DataSt
   /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/doublyLinkedList.h \
   /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/infixPrefixPostfix.h \
   /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/queue.h \
-  /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/binarySearchTree.h
+  /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/binarySearchTree.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque
 
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue:
 
 /volumes/External/Nextcloud/Programming/C/DataStructuresAndAlgorithms/binarySearchTree.h:
 
@@ -1822,6 +1826,8 @@ CMakeFiles/main.dir/main.cpp.o: /volumes/External/Nextcloud/Programming/C/DataSt
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_copy_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/empty.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
 
