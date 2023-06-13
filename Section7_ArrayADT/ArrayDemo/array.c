@@ -86,6 +86,7 @@ int bsRec(struct Array *arr, int l, int h, int data) {
   return -1;
 }
 
+
 int get(struct Array *arr, int index) {
   assert((index < arr->length) && "Index out of bounds");
   return arr->A[index];
@@ -102,6 +103,61 @@ int max(struct Array *arr) {
     if (arr->A[i] > maxN) maxN = arr->A[i];
   }
   return maxN;
+}
+
+void reverseNTime(struct Array *arr) {
+  int *B =  (int *)malloc(arr->size * sizeof(int));
+  int j = 0;
+
+  for (int i = arr->length - 1; i >= 0; --i) {
+    B[j] = arr->A[i];
+    ++j;
+  }
+
+  free(arr->A);
+  arr->A = B;
+}
+
+void reverse(struct Array *arr) {
+  int i = 0;
+  int j = arr->length - 1;
+  for (i = 0; i < j; ++i) {
+    int temp = arr->A[i];
+    arr->A[i] = arr->A[j];
+    arr->A[j] = temp;
+    --j;
+  }
+}
+
+void shiftLeft(struct Array *arr) {
+  assert(!(arr->length == 0) && "Can't shift an array left that only has no values");
+  for (int i = 1; i < arr->length; ++i) {
+    arr->A[i - 1] = arr->A[i];
+  }
+  --arr->length;
+}
+
+void rotateLeft(struct Array *arr) {
+  int temp = arr->A[0];
+  for (int i = 1; i < arr->length; ++i) {
+    arr->A[i - 1] = arr->A[i];
+  }
+  arr->A[arr->length - 1] = temp;
+}
+
+void shiftRight(struct Array *arr) {
+  for (int i = arr->length - 2; i >= 0; --i) {
+    arr->A[i + 1] = arr->A[i];
+  } 
+  arr->A[0] = 0;
+}
+
+void rotateRight(struct Array *arr) {
+  int temp = arr->A[arr->length - 1];
+  for (int i = arr->length - 2; i >= 0; --i) {
+    arr->A[i + 1] = arr->A[i];
+  } 
+  arr->A[0] = temp;
 }
 
 int main() {
@@ -126,4 +182,9 @@ int main() {
   printf("index of 1 using bs: %d\n", bs(&arr, 1));
   printf("getting value at index 2: %d", get(&arr, 2));
   printf("Mad number in the list is %d", max(&arr));
+  reverse(&arr);
+  display(arr);
+  rotateRight(&arr);
+  display(arr);
+
 }
