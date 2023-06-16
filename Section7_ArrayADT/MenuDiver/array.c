@@ -355,64 +355,37 @@ struct Array *diffSorted(struct Array *arr1, struct Array *arr2, enum SortOrder 
   return newArr;
 }
 
-int main() {
-  struct Array arr;
-  printf("Enter size of an array:");
-  scanf("%d", &arr.size);
+void flush() {
+   while ((getchar()) != '\n');
+}
 
-  arr.A = (int *)malloc(arr.size*sizeof(int));
-  arr.length = 0;
+struct Array *getArray() {
+  struct Array *arr = malloc(sizeof(struct Array));
+  
+  printf("Enter size of an array: ");
+  scanf("%d", &arr->size);
+  flush();
+
+  arr->A = (int *)malloc(arr->size*sizeof(int));
+  arr->length = 0;
   
   int n;
-  printf("Enter number of numbers:");
+  printf("Enter number of numbers: ");
   scanf("%d", &n);
-  printf("Enter all elements\n");
+  flush();
+  printf("Enter all elements:\n");
   for (int i = 0; i < n; ++i) {
-    scanf("%d", &arr.A[i]);
+    scanf("%d", &arr->A[i]);
+    flush();
   }
 
-  arr.length = n;
+  arr->length = n;
 
-  display(arr);
-  printf("index of 1 using bs: %d\n", bs(&arr, 1));
-  printf("getting value at index 2: %d\n", get(&arr, 2));
-  printf("Max number in the list is %d\n", max(&arr));
-  printf("\nIs Asscending: %d\n", isSorted(&arr, ASSCENDING));
-  reverse(&arr);
-  display(arr);
+  return arr;
+}
 
-  printf("\nIs Descending: %d\n", isSorted(&arr, DESCENDING));
-  printf("\nIs Asscending: %d\n", isSorted(&arr, ASSCENDING));
+int main() {
 
-  struct Array arrayOne;
-  arrayOne.length = 5;
-  arrayOne.size = 10;
-  arrayOne.A = malloc(arrayOne.size * sizeof(int));
-  arrayOne.A[0] = 2;
-  arrayOne.A[1] = 6;
-  arrayOne.A[2] = 10;
-  arrayOne.A[3] = 15;
-  arrayOne.A[4] = 25;
-
-  struct Array arrayTwo;
-  arrayTwo.length = 5;
-  arrayTwo.size = 10;
-  arrayTwo.A = malloc(arrayTwo.size * sizeof(int));
-  arrayTwo.A[0] = 3;
-  arrayTwo.A[1] = 6;
-  arrayTwo.A[2] = 7;
-  arrayTwo.A[3] = 15;
-  arrayTwo.A[4] = 20;
-
-  printf("\n");
-
-  
-  // arrayTwo.A[1] = 3;
-  // arrayOne.A[4] = 12;
-
-  struct Array *unionArray;
-  unionArray = diffSorted(&arrayOne, &arrayTwo, ASSCENDING);
-
-  display(*unionArray);
+  display(*getArray());
 
 }

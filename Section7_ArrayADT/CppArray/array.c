@@ -22,7 +22,6 @@ void display(struct Array arr) {
   for (int i = 0; i < arr.length; ++i) {
     printf("%d ", arr.A[i]);
   }
-  printf("\n");
 }
 
 void swap(struct Array *arr, int pos1, int pos2) {
@@ -172,12 +171,6 @@ int isSorted(struct Array *arr, enum SortOrder order) {
     if ((order == DESCENDING) && !(arr->A[i + 1] < arr->A[i])) return 0; 
   }
   return 1;
-}
-
-int sum(struct Array *arr) {
-  int n = 0;
-  for (int i = 0; i < arr->length; ++i) n += arr->A[i];
-  return n;
 }
 
 struct Array *merge(struct Array *arr1, struct Array *arr2, enum SortOrder order) {
@@ -362,67 +355,64 @@ struct Array *diffSorted(struct Array *arr1, struct Array *arr2, enum SortOrder 
   return newArr;
 }
 
-int findMissFirstN(struct Array *arr) {
-  int arrSum = sum(arr);
-  int lastElm = arr->A[arr->length - 1];
-  int sumNaturalFormula = (lastElm * (lastElm + 1)) / 2;
-  return sumNaturalFormula - arrSum;
-}
+int main() {
+  struct Array arr;
+  printf("Enter size of an array:");
+  scanf("%d", &arr.size);
 
-int findMiss(struct Array *arr) {
-  int firstElm = arr->A[0];
-  for (int i = 0; i < arr->length; ++i) {
-    if ((arr->A[i] - i) != firstElm) return i + firstElm;
-  }
-
-  return -1;
-}
-
-void findMultipleMissingElm(struct Array *arr) {
-  int correctDiff = arr->A[0];
-  for (int i = 0; i < arr->length; ++i) {
-    if ((arr->A[i] - i) != correctDiff) {
-      printf("Missing: %d\n", i + correctDiff);
-      ++correctDiff;
-    } 
-  }
-}
-
-void flush() {
-   while ((getchar()) != '\n');
-}
-
-struct Array *getArray() {
-  struct Array *arr = malloc(sizeof(struct Array));
-  
-  printf("Enter size of an array: ");
-  scanf("%d", &arr->size);
-  flush();
-
-  arr->A = (int *)malloc(arr->size*sizeof(int));
-  arr->length = 0;
+  arr.A = (int *)malloc(arr.size*sizeof(int));
+  arr.length = 0;
   
   int n;
-  printf("Enter number of numbers: ");
+  printf("Enter number of numbers:");
   scanf("%d", &n);
-  flush();
-  printf("Enter all elements:\n");
+  printf("Enter all elements\n");
   for (int i = 0; i < n; ++i) {
-    scanf("%d", &arr->A[i]);
-    flush();
+    scanf("%d", &arr.A[i]);
   }
 
-  arr->length = n;
+  arr.length = n;
 
-  return arr;
-}
+  display(arr);
+  printf("index of 1 using bs: %d\n", bs(&arr, 1));
+  printf("getting value at index 2: %d\n", get(&arr, 2));
+  printf("Max number in the list is %d\n", max(&arr));
+  printf("\nIs Asscending: %d\n", isSorted(&arr, ASSCENDING));
+  reverse(&arr);
+  display(arr);
 
-int main() {
-  struct Array *arr = malloc(sizeof(struct Array));
-  arr = getArray();
+  printf("\nIs Descending: %d\n", isSorted(&arr, DESCENDING));
+  printf("\nIs Asscending: %d\n", isSorted(&arr, ASSCENDING));
+
+  struct Array arrayOne;
+  arrayOne.length = 5;
+  arrayOne.size = 10;
+  arrayOne.A = malloc(arrayOne.size * sizeof(int));
+  arrayOne.A[0] = 2;
+  arrayOne.A[1] = 6;
+  arrayOne.A[2] = 10;
+  arrayOne.A[3] = 15;
+  arrayOne.A[4] = 25;
+
+  struct Array arrayTwo;
+  arrayTwo.length = 5;
+  arrayTwo.size = 10;
+  arrayTwo.A = malloc(arrayTwo.size * sizeof(int));
+  arrayTwo.A[0] = 3;
+  arrayTwo.A[1] = 6;
+  arrayTwo.A[2] = 7;
+  arrayTwo.A[3] = 15;
+  arrayTwo.A[4] = 20;
+
+  printf("\n");
+
   
-  display(*arr);
-  findMultipleMissingElm(arr);
-  printf("The missing number is %d\n", findMiss(arr));
-  
+  // arrayTwo.A[1] = 3;
+  // arrayOne.A[4] = 12;
+
+  struct Array *unionArray;
+  unionArray = diffSorted(&arrayOne, &arrayTwo, ASSCENDING);
+
+  display(*unionArray);
+
 }
