@@ -388,6 +388,44 @@ void findMultipleMissingElm(struct Array *arr) {
   }
 }
 
+// Works only on sorted arrays
+void printDuplicates(struct Array *arr) {
+  int lastDup = 0;
+  for (int i = 0; i < arr->length - 1; ++i) {
+    if (arr->A[i] == arr->A[i + 1]) {
+      if (arr->A[i + 1] != lastDup) {
+        lastDup = arr->A[i];
+        printf("Duplicate: %d\n", arr->A[i]);
+      } 
+    }
+  }
+}
+
+// Works only on sorted arrays
+void countDuplicates(struct Array *arr) {
+  int lastDup = 0;
+  for (int i = 0; i < arr->length - 1; ++i) {
+
+
+    if (arr->A[i] == arr->A[i + 1]) {
+      if (arr->A[i + 1] != lastDup) {
+        lastDup = arr->A[i];
+        printf("Duplicate: %d", arr->A[i]);
+        
+        int j = i + 1;
+        for (; j < arr->length; ++i) {
+          if (arr->A[i] == arr->A[j]) {
+          } else {
+            --j;
+            break;
+          }
+        }
+        printf(" | Num duplicates: %d\n", i - j);
+      } 
+    }
+  }
+}
+
 void flush() {
    while ((getchar()) != '\n');
 }
@@ -424,5 +462,6 @@ int main() {
   display(*arr);
   findMultipleMissingElm(arr);
   printf("The missing number is %d\n", findMiss(arr));
+  countDuplicates(arr);
   
 }
